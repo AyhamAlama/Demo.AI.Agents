@@ -1,0 +1,12 @@
+﻿global using Demo.AI_Agents;
+global using Demo.AI_Agents.Clients;
+global using Demo.AI_Agents.Constants;
+global using Microsoft.Agents.AI;
+global using Microsoft.Extensions.AI;
+global using Microsoft.Extensions.Configuration;
+global using OpenAI;
+global using OpenAI.Chat;
+global using OpenAI.Responses;
+global using System.ClientModel;
+global using System.Text;
+global using MicrosoftAIMessage = Microsoft.Extensions.AI;

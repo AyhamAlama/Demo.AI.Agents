@@ -1,4 +1,4 @@
-﻿namespace Demo.AI_Agents.Utilities;
+﻿namespace AI.Shared.Utilities;
 
 public class AppConfiguration
 {
@@ -10,4 +10,6 @@ public class AppConfiguration
     public static string GitHubToken => GetSecret("GITHUB_TOKEN");
 
     public static string GitHubEndpoint => GetSecret("GIT_HUB_END_POINT");
+
+    public static string EmbeddingModel => GetSecret("EMBEDDING_MODEL");
 }

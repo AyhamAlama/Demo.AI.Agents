@@ -1,4 +1,4 @@
-﻿namespace Demo.AI_Agents.Constants;
+﻿namespace AI.Shared.Constants;
 
 public class Instructions
 {

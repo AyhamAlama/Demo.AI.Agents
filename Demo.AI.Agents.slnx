@@ -1,5 +1,8 @@
 <Solution>
+  <Folder Name="/Solution Items/">
+    <File Path="README.md" />
+  </Folder>
+  <Project Path="AI.Chatbot/AI.Chatbot.csproj" />
   <Project Path="AI.SemanticKernel.Vector/AI.SemanticKernel.Vector.csproj" Id="70a8eb37-c903-4e2d-8e75-40f131f5d1af" />
   <Project Path="AI.Shared/AI.Shared.csproj" Id="efc3b1d8-158b-42b7-ab03-66cd48bae56f" />
-  <Project Path="AI.Chatbot/AI.Chatbot.csproj" />
 </Solution>

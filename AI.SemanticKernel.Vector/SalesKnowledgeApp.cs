@@ -1,4 +1,5 @@
 ﻿using AI.SemanticKernel.Models;
+using AI.Shared.Extensions;
 using AI.Shared.Handlers.MessageHandler;
 using Microsoft.Agents.AI;
 using OpenAI.Chat;
@@ -107,16 +108,21 @@ public class SalesKnowledgeApp
         while (true)
         {
             Console.Write("\n> ");
+
             string input = Console.ReadLine() ?? "";
+
             if (string.IsNullOrWhiteSpace(input)) continue;
+
             if (input.ToLower() == "exit") break;
 
-            // Vector Search
             var context = new StringBuilder();
+
             await foreach (var result in _collection.SearchAsync(input, 3))
             {
                 string entry = $"Topic: {result.Record.Topic} - Summary: {result.Record.Summary}";
+
                 Utili.Yellow($"[Score: {result.Score:F3}] {entry}\n");
+
                 context.AppendLine(entry);
             }
 
@@ -127,8 +133,12 @@ public class SalesKnowledgeApp
             ];
 
             AgentResponse response = await _agent.RunAsync(messages, session);
+
             Utili.Yellow("── Answer ──────────────────────────────");
+
             Console.WriteLine(response);
+
+            response.Usage.ToConsole();
         }
     }
 

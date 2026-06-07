@@ -1,4 +1,6 @@
-﻿namespace Demo.AI_Agents;
+﻿using AI.Shared.Extensions;
+
+namespace Demo.AI_Agents;
 
 public static class Runner
 {
@@ -59,6 +61,8 @@ public static class Runner
             }
             else
                 Utili.Blue($" {agentResponse.Result}");
+
+            agentResponse.Usage.ToConsole();
         }
     }
 

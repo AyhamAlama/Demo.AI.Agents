@@ -25,4 +25,12 @@ public class Utili
         Console.WriteLine(message);
         Console.ForegroundColor = previousColor;
     }
+
+    public static void Green(string message)
+    {
+        var previousColor = Console.ForegroundColor;
+        Console.ForegroundColor = ConsoleColor.Green;
+        Console.WriteLine(message);
+        Console.ForegroundColor = previousColor;
+    }
 }

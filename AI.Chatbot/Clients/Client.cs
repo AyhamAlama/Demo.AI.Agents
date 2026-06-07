@@ -34,12 +34,12 @@ public static class Client
 
         if (justByKey)
             openAIClient = AI.Shared.Extensions.OpenAIClientExtensions.SetClient(key,
-                (string?)null!,
-                httpClientPipelineTransport);
+                (string?)null!/*,
+                httpClientPipelineTransport*/);
         else
             openAIClient = AI.Shared.Extensions.OpenAIClientExtensions.SetClient(endpoint ?? throw new Exception("you should pass a endpoint"),
-                key,
-                httpClientPipelineTransport);
+                key/*,
+                httpClientPipelineTransport*/);
 
         var chatClient = openAIClient.GetChatClient(model);
 
